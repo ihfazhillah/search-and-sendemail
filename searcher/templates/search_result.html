@@ -9,7 +9,7 @@
     <h3>results for {{ query }}</h3>
 
     <h5>Send this result into your email</h5>
-    <form action="" method="post">
+    <form action="{% url 'send_email' %}" method="post">
         {% csrf_token %}
         <input id="search" type="text" name="email">
         <input type="hidden" name="query" value={{ query }}>

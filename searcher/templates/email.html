@@ -1,0 +1,19 @@
+
+    <table>
+        <thead>
+            <tr>
+                <th>image</th>
+                <th>title</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for res in result %}
+            <tr>
+                <td><img src="{{ res.image }}" alt=""></td>
+                <td><a href="{{ res.link}}">{{ res.title }}</a></td>
+                <td>{{ res.price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>

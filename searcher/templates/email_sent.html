@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h3>Email Sent</h3>
+    <a href="{% url 'index' %}">Back to index</a>
+
+
+    <script charset="utf-8">
+        setTimeout(function(){
+            window.location.href = "{% url 'index' %}"
+        }, 2000)
+    </script>
+</body>
+</html>
