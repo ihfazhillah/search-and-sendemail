@@ -12,7 +12,7 @@
     <form action="{% url 'send_email' %}" method="post">
         {% csrf_token %}
         <input id="search" type="text" name="email">
-        <input type="hidden" name="query" value={{ query }}>
+        <input type="hidden" name="query" value="{{ query }}">
         <input type="submit" value="Submit">
     </form>
 
