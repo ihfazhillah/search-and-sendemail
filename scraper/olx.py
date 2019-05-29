@@ -7,8 +7,9 @@ def scrape(query):
     """To scrape method"""
     query_fix = '-'.join(query.split(' '))
     url = f"https://www.olx.co.id/properti/q-{query_fix}/"
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text)
+    header = {'user-agent': 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; rv:1.9.2.16) Gecko/20110319 Firefox/3.6.16'}
+    response = requests.get(url, headers=header)
+    soup = BeautifulSoup(response.text, features='html.parser')
     listings = soup.select('tr.cursor.adListingType')
     result = []
     for listing in listings:
